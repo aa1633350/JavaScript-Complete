@@ -1,0 +1,75 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+body h1{
+    margin-bottom: 600px;
+    /* margin-left: 200px; */
+}
+.main-div{
+    width: 320px;
+    height: 500px;
+    background: rgb(175, 173, 173);
+    
+    
+}
+
+.main-div .display{
+    width: 320px;
+    height: 150px;
+    background:cyan;
+}
+.main-div .display #output{
+    padding-top: 30px;
+    width: 320px;
+    height: 50px;
+    background: lime;
+    text-align: right;
+    /* margin-right: 120px; */
+    
+}
+
+.main-div .lower-part{
+    width: 320px;
+    height: 350px;
+    background:red;
+    
+}
+
+.main-div .lower-part button{
+    width: 50px;
+    height: 50px;
+    margin: 15px;
+    font-weight: bold;
+    float:left;
+    border-radius: 50%;
+    border-width: 0;
+    font-size: 15px;
+    cursor: pointer;
+}
+#operator-add{
+    background-color: #20b2aa;
+}
+
+#operator-sub{
+    background-color: #ffa500;
+}
+#operator-mul{
+    background-color: #f08080;
+}
+#operator-div{
+    background-color: #7d93e0;
+}
+#operator-equal{
+    background-color: #9477af;
+}

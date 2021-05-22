@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script>
+            const tempLoad = () => {
+                
+                let temp = document.getElementById('temp');
+                setTimeout(() =>{
+                    temp.style.color= '#f8b627' ;    
+                },1000)
+                setTimeout(() =>{
+                    temp.style.color= '#00FF00' ;    
+                },2000)
+                setTimeout(() =>{
+                    temp.style.color= '#0000FF' ;    
+                },3000)
+
+                
+            }
+            setInterval(tempLoad, 4000);
+            // tempLoad();
+        </script>
+    </head>
+    <body>
+        <div id='outerDiv'>
+            <div id='innerDiv'>
+                <h1 id='temp'> Disco Lights  </h1>
+                <br>
+                <button onClick='tempLoad()'> Click me</button>
+            </div>
+        </div>
+    </body>
+</html>

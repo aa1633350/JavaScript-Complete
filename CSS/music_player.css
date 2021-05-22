@@ -1,0 +1,123 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+
+.main-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: #f6f6f6;
+    display: grid;
+    place-items: center;
+}
+
+.music-container{
+    width: 35rem;
+    height: 55rem;
+    /* background-color: #ffffff; */
+    background: linear-gradient(to top right, #7197c9, #cccaca);
+    border-radius: 20px;
+    box-shadow: 0 1.2rem 3rem 0.5rem rgba(0,0,0,0.2);
+    padding: 3rem;
+    text-align: center;
+}
+
+#title{
+    font-size: 45px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: #171717;
+    word-spacing: 5px;
+    text-shadow: 0 0.3rem 0.5rem rgba(0,0,0,0.3);
+}
+
+#artist{
+    font-size: 30px;
+    font-weight: bolder;
+    margin-top: 10px;
+    text-transform: capitalize;
+    color: #cccaca;
+    margin-bottom: 40px;
+}
+
+.image-container{
+    width: 25rem;
+    height: 25rem;
+    margin: auto;
+    margin-bottom: 5rem;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 1.2rem 3rem 0.5rem rgba(0,0,0,0.4);
+    border-radius: 50%;
+    object-fit: cover;
+}
+.music-controls{
+    width: 20rem;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+.music-controls .fas{
+    color: #111111;
+    font-size: 50px;
+    cursor: pointer;
+
+}
+
+.music-controls .fas:hover{
+    color: grey;
+}
+/* jab play button pr click hoga tho isko Javascript se dynimacally add krenge */
+
+@keyframes rotatePlayer{
+    from{
+        transform: rotate(0 deg);
+    }
+    to{
+        transform: rotate(360 deg);
+    }
+}
+
+.anime {
+    animation: rotatePlayer 3s linear 0 infinite forwards none;
+}
+.progress-bar-container{
+    
+    position: relative;
+    width: 100%;
+    height: 1.2rem;
+    margin-bottom: 1.5rem;
+    background-color: black;
+    border-radius: 4rem;
+    cursor: pointer;
+}
+.labels{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0 .2rem;
+}
+.progress-bar-container #progress{
+    /* padding-bottom: 2rem; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-bottom: 1rem;
+    height: 100%;
+    width: 0%;
+    
+    
+    
+    /* color: black; */
+}
+

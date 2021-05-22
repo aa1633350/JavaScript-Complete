@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            .container{
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(56, 157, 197);
+            }
+            .face{
+                width: 650px;
+                height: 550px;
+                border-radius: 50%;
+                background-color: #fff;
+                border: none;
+                box-shadow: 0 1.2rem 3rem 0.5rem rgba(0,0,0,0.35);
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-direction: column;
+            }
+            .eyes{
+                width: inherit;
+                height: 300px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                /* background-color: red; */
+            }
+
+            .eye{
+                width: 250px;
+                height: 250px;
+                border-radius: 50%;
+                box-shadow: 0 1.2rem 3rem 0.5rem rgba(0,0,0,0.35);
+                background-color: #fff;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                overflow: hidden;
+            }
+            .pupil{
+                width: 50px;
+                height: 50px;
+                background-color: black;
+                border-radius: 50%;
+                box-shadow: rgba(0,0,0,0.1) 0px 10px 50px ;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div class='container'>
+            <div class='face'>
+                <div class='eyes'>
+                    <div class='eye'>
+                        <div class='pupil'></div>
+                    </div>
+                    <div class='eye'>
+                        <div class='pupil'></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+            const pupils = document.getElementsByClassName('pupil');
+            let pupilsArr = Array.from(pupils);
+            //pupils movement
+            let pupilStartPoint = -100;
+            let pupilRange = 200;
+            //Mouse X 
+            let mouseXStartPosition = 0;
+            let mouseXEndPosition = window.innerWidth;
+            let currentXPosition = 0;
+            let fractionX = 0;
+
+            //Mouse Y
+            let mouseYEndPosition = window.innerHeight;
+            let currentYPosition = 0;
+            let fractionY = 0;
+            // console.log(window.innerWidth);
+            const mouseMove = (event) =>{
+                currentXPosition = event.clientX - mouseXStartPosition;
+                fractionX = currentXPosition / mouseXEndPosition;
+                // console.log(fractionX);
+
+                currentYPosition = event.clientY;
+                fractionY = currentYPosition / mouseYEndPosition;
+
+                let pupilXCurrentPosition = (fractionX * pupilRange) + pupilStartPoint;
+                let pupilYCurrentPosition = (fractionY * pupilRange) + pupilStartPoint;
+
+                pupilsArr.forEach((currentPupil) => {
+                    currentPupil.style.transform = `translate(${pupilXCurrentPosition}px, ${pupilYCurrentPosition}px)`;
+                    
+                })
+            }
+            window.addEventListener('mousemove',mouseMove);
+        </script>
+    </body>
+</html>

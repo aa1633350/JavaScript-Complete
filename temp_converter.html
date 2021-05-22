@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+           const calculateTemp = () =>{
+                const val = document.getElementById('temp').value;
+                const type = document.getElementById('temp_diff').value;
+                // console.log(type);
+
+                const celTofar = (celsius) =>{
+                    let fahrenhite = Math.round((celsius * 9/5)+ 32);
+                    return fahrenhite;
+                }
+                const fartoCel = (fahrenhite) =>{
+                    let cel = Math.round((fahrenhite -32)* 5/9);
+                    return cel;
+                }
+                let result;
+                if(type =='cel'){
+                    console.log('hello');
+                    result = celTofar(val);
+                    document.getElementById('result_container').innerHTML = `= ${result}farhenhite`;
+                }
+                else{
+                    result = fartoCel(val);
+                    document.getElementById('result_container').innerHTML = `= ${result}Celsius`;
+                }
+
+            }
+        </script>
+    </head>
+    <body>
+        <form id='tempCal' onsubmit="calculateTemp(); return false">
+            <label> Please Input the temperature you'd lke to convert</label>
+            <input type='number' name='temp' id='temp'>
+        <!-- </br> -->
+            <select name='temp_diff' id='temp_diff'>
+                <option value="cel">Celsius</option>
+                <option value="far">Fahrenhite</option>
+            </select>
+        </br>
+            <input type="submit" name='temp'>
+            <span id='result_container'></span>
+        </form>
+    </body>
+</html>

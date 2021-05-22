@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet' href='music_player.css'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" 
+        integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" 
+        crossorigin="anonymous" />
+    </head>
+    <body>
+        <div class='main-container'>
+            <div class='music-container'>
+                <h2 id='title'>Dareyaa</h2>
+                <h3 id='artist'>Manmarziyaan</h3>
+                <div class='image-container'>
+                    <img src='images_CSS/back1.jpg' />
+                </div>
+                <audio src='audio/music1.mp3' ></audio>
+                <div class="labels">
+                    <label id='duration'>0.00</label>
+                    <label id='max_duration'>2.44</label>
+                </div>
+
+                <div class='progress-bar-container' id='progress-bar-container'>
+                    <progress id='progress' value='' max=''></progress>
+                </div>
+
+                <!-- music controls play previous and next -->
+                <div class='music-controls'>
+                    <i class="fas fa-backward" id='previous' title="Previous"></i>
+                    <i class="fas fa-play-circle play-button" id='play' title="Play"></i>
+                    <i class="fas fa-forward" id='next' title="Next"></i>
+                </div>
+            </div>
+        </div>
+        <script src='music_player.js'></script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script>
+            num = 10;
+            var myvar;
+            const startCount = () =>{
+                myvar = setInterval(myTimer,1000);
+            };
+            function myTimer(){
+                if(num==0){
+                    document.getElementById('play').innerText ="LET'S PLAY";
+                    clearInterval(myvar);
+                }
+                document.getElementById('counter').innerText = num;
+                num--;
+            }
+
+            // function stopCounter(){
+            //     clearInterval(myvar);
+            // }
+        </script>
+    </head>
+    <body>
+        <p id='counter'></p>
+        <h2 id="play"></h2>
+        <button onClick ="startCount()" > Start Counter </button>
+        <!-- <button onclick ="stopCounter()">Stop Counter</button> -->
+    </body>
+</html>

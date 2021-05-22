@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <style>
+            #parentID{
+                border: 4px solid blueviolet;
+                width: 200px;
+                height: 200px;
+                background-color: indianred;
+                padding: 25px;
+                margin-left: 40px;
+            }
+            #childID{
+                border: 4px solid green;
+                width: 50px;
+                height: 50px;
+                background-color: darkgreen;
+                /* margin-bottom: 10px ; */
+            }
+        </style>
+        <script>
+            const parentID = document.getElementById('parentID');
+            const childID = document.getElementById('childID');
+            
+            const parentCall = () =>{
+                alert('Parent Div is called');
+            }
+
+            const childCall = () =>{
+                alert('child div is called');
+            }
+
+            // function parentCall(){
+            //     alert('Parent Div is called');
+            // }
+
+            // function childCall(){
+            //     alert('child div is called');
+            // }
+
+            parentID.addEventListener('click', parentCall());
+            childID.addEventListener('click', childCall());
+            
+        </script>
+    </head>
+    <body>
+        <h1>Hello</h1>
+        <div class='parentDIV' id='parentID'> 
+            <p>You can do it like this</p>
+            <div class = 'childDIV' id='childID'> Okay </div>
+        </div>
+
+        
+
+    </body>
+</html>

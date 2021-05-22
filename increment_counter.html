@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Increment Counter</title>
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+    </head>
+    <body>
+        
+        <h1>Hello</h1>
+        <div class='counter-container'>
+            
+            <div class='Counter' data-target="4000"></div>
+            <span>Orders Completed</span>
+        </div>
+
+        <div class='counter-container'>
+            
+            <div class = 'Counter' data-target="15000"></div>
+            <span>Happy Clients</span>
+        </div>
+            
+        <div class='counter-container'></div>
+            <div class = 'Counter' id='project' data-target="1000"></div>
+            <span>Ongoing Projects</span>
+        </div>    
+
+        <script>
+            const counters = document.querySelectorAll('.Counter');
+            console.log(counters);
+
+            
+            counters.forEach((count) => {
+                // console.log('Hello');
+                count.innerHTML = 0;
+
+                const updateCounter = () =>{
+                    const startCount = Number(count.innerHTML);
+                    const targetCount = Number(count.getAttribute('data-target'));
+                    // console.log(typeof(targetCount));
+                    
+                    let incr = targetCount/100;
+                    if(startCount<targetCount){
+                    count.innerHTML = Math.round(startCount + incr); 
+                    setTimeout(updateCounter, 10);
+                    }
+                    else{
+                        count.innerHTML = targetCount;
+                        // let temp = document.getElementById('project');
+                        // temp.style.color = '#f8b627';
+                        let x = document.querySelectorAll('.Counter');
+                        for( var i =0; i<x.length; i++){
+                            x[i].style.backgroundColor='blue';
+                        }
+                    }
+                }
+
+                updateCounter();
+            });
+        </script>
+        
+
+        
+            
+        
+    </body>
+</html>

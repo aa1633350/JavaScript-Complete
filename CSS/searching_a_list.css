@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h2{
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#myInput{
+    width: 100vw;
+    height: 2rem;
+    padding: 1rem 1.2rem;
+    outline: thin solid black;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    
+}
+.mylist{
+    width: 100vw;
+    height: fit-content;
+    margin-top: 1rem;
+    /* background: brown; */
+}
+
+li{
+    padding: 1rem 1.2rem;
+    /* border: .1rem solid grey; */
+    outline: thin solid black;
+    background: rgb(212, 204, 204);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+}

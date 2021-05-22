@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    
+}
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: url('images_CSS/canva1.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.heading{
+    width: 100%;
+    height: 80px;
+    background-color: black ;
+}
+
+.logo{
+    width: 31%;
+    line-height: 80px;
+    /* color: chartreuse; */
+    background-color:#FF66C4;
+    text-align: center;
+    font-size: large;
+    font-weight: bolder;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    float: left;
+    
+}
+
+.menu{
+    width: 69%;
+    line-height: 80px; /* matlab jo written line hai wo top se 80 px neeche*/
+    float: right;
+    color: white;
+    justify-content: center;
+}
+.dropbtn {
+    background-color: black;
+    color: white;
+    padding: 16px;
+    font-size: 24px;
+    border: none;
+    font-family: sans-serif;
+    margin-left: 3.6rem;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    
+  }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+main{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .left-sec{
+    padding-left: 40px;
+}
+.left-sec h2{
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-top: 40px;
+}
+.left-sec h1{
+    font-size: 55px;
+    font-weight: 700;
+    margin: 12px 0;
+}
+
+.left-sec p{
+    font-weight: bold;
+    margin-bottom: 20px ;
+}
+
+.left-sec button{
+    padding:  15px 45px;
+    text-align: center;
+    font-size: 16px;
+    border: none;
+    color: #fff;
+    background-image: linear-gradient(to right, #649bff, #0070fa);
+    border-radius: 10px ;
+    margin-left: 90px;
+}

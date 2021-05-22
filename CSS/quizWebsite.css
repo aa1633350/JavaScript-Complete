@@ -1,0 +1,117 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-weight: 300;
+}
+
+html{
+    font-size:62.5% ;
+}
+
+.main-container{
+    width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: hsl(206, 92%, 94%);
+}
+
+.inner-div{
+    width: 40vw;
+    background-color: #fff;
+    padding: 30px 80px;
+    border-radius: 10px;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+.inner-div h2{
+    font-size: 35px;
+    font-weight: 400;
+    margin: 10px 0 40px 0;
+    text-align: center;
+}
+
+.inner-div li{
+    font-size: 20px;
+    list-style: none;
+    margin-top: 15px;
+}
+
+input {
+    cursor: pointer;
+}
+
+#submit , .btn{
+    padding: 10px 30px;
+    outline: none;
+    font-size: 20px;
+    font-weight: 400;
+    display: block;
+    margin: auto;
+    border: none;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #74b9ff;
+    margin-top: 30px;
+    cursor: pointer;    
+}
+
+#submit:hover{
+    background-color: #0984e3;
+}
+
+#showScore{
+    background-color: #dfe6e9;
+    margin-top: 30px;
+    padding: 30px 40px;
+    box-shadow: 0 10px 5px -7px rgba(0, 0, 0, 0.4);
+}
+
+#showScore h3{
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#showScore .btn{
+    margin-top: 20px;
+    background-color: #55efc4;
+    color: #2d3436;
+
+}
+#showScore .btn :hover{
+    background-color: #16755a;
+    color: #fff;
+}
+.scoreArea{
+    display: none;
+}
+
+.dialog-container{
+    display: none;
+    width: 37rem;
+    height: 12rem;
+    z-index: 1;
+    background: linear-gradient(to top right, #649bff,#cadaee);
+    box-shadow: 0 1.2rem 3rem 0.5rem rgba(0,0,0,0.6);
+}
+
+.close{
+    color: #aaaaaa;
+    float: right;
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.dialog-container p{
+    text-align: center;
+    text-transform:capitalize;
+    padding-top: 4.5rem;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 0 0.3rem 0.5rem rgba(0,0,0,0.3);
+    word-spacing: 5px;
+}
